@@ -27,6 +27,9 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `producto`
 --
 
+CREATE DATABASE friki_art_cja_bd;
+USE friki_art_cja_bd;
+
 CREATE TABLE `producto` (
   `id_producto` int(11) NOT NULL,
   `nom_producto` varchar(40) NOT NULL,

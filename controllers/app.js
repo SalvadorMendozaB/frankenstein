@@ -5,7 +5,7 @@ $(document).ready(function () {
     success: function (response) {
       let productos = JSON.parse(response);
       let plantilla = "";
-      console.log(productos);
+      console.log(response);
       productos.forEach((producto) => {
         plantilla += `
                  <form method="POST" action = "./detalleProducto.html" class="formDetalle">
@@ -15,6 +15,7 @@ $(document).ready(function () {
             <div class="nombre"> $ ${producto.nombre} </div>
             <div class="precio"> $ ${producto.precio} </div>
         </article>
+<<<<<<< HEAD
         </button>
       </form> `;
       });
@@ -22,3 +23,12 @@ $(document).ready(function () {
     },
   });
 });
+=======
+      </form> `
+             })
+         }
+
+     });
+
+})
+>>>>>>> 454452525804ac77aca7f23a4242c6be7130a88b

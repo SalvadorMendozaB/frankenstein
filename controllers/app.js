@@ -20,4 +20,27 @@ $(document).ready(function(){
          }
 
      })
+
+     $('#inputBusqueda').keyup(function(e){
+         if($('#inputBusqueda').val()){
+             let buscar=$('#inputBusqueda').val();
+             $.ajax({
+                 url:'./BD/buscar.php',
+                 type: 'POST',
+                 data: {buscar},
+                 seccess: function(response){
+                     let obj=JSON.parse(response);
+                     let template= '';
+                     obj.forEach(objs=>{
+                         template+=`<li>
+                         ${objs.nom_producto}
+                         </li>`
+                     });
+                     console.log(obj);
+                     $('#ulMuestra').html(template);
+
+                 }
+             });
+         }
+     })
 })

@@ -14,7 +14,6 @@
         $json[]= array(
             "id" => $fila["id_producto"],
             "nombre" => $fila["nom_producto"],
-            "descripcion" => $fila["descripcion"],
             "precio" => $fila["precio"],
             "imagen" => $fila["imagen"]
         );
@@ -22,5 +21,5 @@
     
     $json_string = json_encode($json);
 
-    echo $json_string;
+ 
 ?>

@@ -20,6 +20,7 @@
     }
     
     $json_string = json_encode($json);
+    echo $json_string;
 
  
 ?>
